@@ -1,0 +1,45 @@
+.navbar-brand{
+    color: white !important;
+    margin-left: 40px;
+    text-decoration: none !important;
+}
+
+.nav-link{
+    color: white !important;
+    text-decoration: none !important;
+}
+.t{
+    text-decoration: none !important;
+}
+a:hover{
+    color: silver!important;
+}
+.navbar-background{
+    background-color: rgba(29, 7, 7, 0.959);
+}
+
+.Home-text{
+    color:white;
+    text-align: right;
+    float: right;
+    text-decoration: none;
+}
+
+.Home-text:hover{
+    color: white;
+}
+
+.nav-btn{
+    margin-right: 20px !important;
+    margin-left: 20px !important;
+    color: white !important;
+}
+
+.backgound{
+    margin-top: 5px;
+    height: 800px;
+}
+
+.input-group{
+    margin-left: 65%;
+}
