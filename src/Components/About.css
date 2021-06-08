@@ -22,7 +22,7 @@
   }
   
   .about-card{
-    width: 18rem !important;
+    width: 20rem !important;
     height: 30rem !important;
     margin-top: 10px !important;
     margin-left: 50px !important;
@@ -31,9 +31,9 @@
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
-.card-img-top{
+.card-img-top-about{
     width: 100% !important;
-    height: 15vw !important;
+    height: 40% !important;
     object-fit: cover !important;
     margin-top: 5% !important;
     margin-bottom: 5% !important;
@@ -73,4 +73,8 @@
   
   .row{
     justify-content: center;
+  }
+
+  .about-background{
+    background-color: rgba(128, 128, 128, 0.274);
   }

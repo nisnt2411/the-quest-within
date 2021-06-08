@@ -3,14 +3,14 @@ import sanityClient from '../client';
 import { useParams } from 'react-router-dom';
 import imageUrlBuilder from '@sanity/image-url';
 import NavBar from './NavBar';
-import './SinglePost.css';
+import './SingleImage.css';
 
 const builder = imageUrlBuilder(sanityClient);
 
 const urlFor = source => (builder.image(source));
 
-const SinglePost = props => {
-    const [singlePost, setSinglePost] = useState(null);
+const SingleImage = props => {
+    const [singleImage, setSingleImage] = useState(null);
     const { slug } = useParams();
     useEffect(() => {
         sanityClient.fetch(`*[slug.current == "${slug}"]{
@@ -27,10 +27,10 @@ const SinglePost = props => {
             "name": author->name,
             "authorImage": author->image
         }`)
-        .then((data) => setSinglePost(data[0]))
+        .then((data) => setSingleImage(data[0]))
         .catch(console.error)
     },[slug])
-    if(!singlePost){
+    if(!singleImage){
         return(
             <div>
                 <NavBar/>
@@ -43,11 +43,9 @@ const SinglePost = props => {
             <NavBar/>
             <div className="container-fluid">
                 <div className="container img-container">
-                    <img src={singlePost.mainImage.asset.url} alt="#" className="img-fluid"/>
+                    <img src={singleImage.mainImage.asset.url} alt="#" className="img-fluid"/>
                 </div>
                 <div className="container description">
-                <h3 className="title">{singlePost.title}</h3>
-                <p>{singlePost.description}</p>
                 </div>                
             </div>
         </div>
@@ -55,4 +53,4 @@ const SinglePost = props => {
     )
 }
 
-export default SinglePost;
+export default SingleImage;

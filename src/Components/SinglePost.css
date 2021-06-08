@@ -1,0 +1,14 @@
+.img-container{
+    margin-top: 10px;
+    justify-content: center;
+
+    width: 50rem;
+}
+
+.description{
+    margin-top: 10px;
+    justify-content: center;
+}
+.title{
+    color: gray;
+}

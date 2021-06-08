@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useHistory, withRouter } from 'react-router-dom';
 import sanityClient from '../client.js';
 import NavBar from './NavBar';
 import './Post.css';
@@ -7,6 +7,9 @@ import './Post.css';
 const Post = props => {
     const [postData, setPost] = useState(null);
 
+    function HandleRoute (path) {
+        props.history.push(path)
+    }
     useEffect(() => {
         sanityClient
         .fetch(
@@ -19,21 +22,24 @@ const Post = props => {
                         url
                     },
                     alt
-                }
+                },
+                description
             }`
         )
-        .then((data) => setPost(data))
+        .then((data) => {
+            setPost(data);
+        })
         .catch((error) => console.log(error))
     },[])
     return(
-        <div className="row">
+        <div className="row background">
             <NavBar/>
             {postData && postData.map(post =>(
-            <div className="card post-card">
+            <div onClick={()=>HandleRoute("/post/"+post.slug.current)} key={post.mainImage.asset._id} className="card post-card">
                 <img className="card-img-top" src={post.mainImage.asset.url} alt={post.mainImage.alt}/>
                 <div className="card-body">
                     <h5 className="card-title">{post.title}</h5>
-                    <Link className="btn btn-success">Go To post</Link>
+                    <p className="post-description">{post.description}</p>
                 </div>
             </div>
             ))}
@@ -41,4 +47,4 @@ const Post = props => {
     )
 }
 
-export default Post;
+export default withRouter(Post);

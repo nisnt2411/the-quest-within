@@ -1,0 +1,11 @@
+<div onClick={()=>HandleRoute("/gallary/"+image.slug.current)} key={image.mainImage.asset._id} className="card image-card">
+<img className="card-img-top" src={image.mainImage.asset.url} alt={image.mainImage.alt}/>
+<div className="card-body">
+    <h5 className="card-title">{image.title}</h5>
+</div>
+<figure>
+    <figcaption class="blockquote-footer">
+         <cite title="Source Title">{image.credit}</cite>
+    </figcaption>
+</figure>
+</div>

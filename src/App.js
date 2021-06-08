@@ -4,8 +4,8 @@ import Home from './Components/Home';
 import About from './Components/About';
 import SinglePost from './Components/SinglePost';
 import Post from './Components/Post';
-import Project from './Components/Project';
-// 36:40
+import Gallary from './Components/Gallary';
+import SingleImage from './Components/SingleImage'
  const App = props => {
   return (
     <Router>
@@ -14,7 +14,8 @@ import Project from './Components/Project';
         <Route component={About} path="/about" />
         <Route component={SinglePost} path="/post/:slug" />
         <Route component={Post} path="/post" />
-        <Route component={Project} path="/project"/>
+        <Route component={SingleImage} path="/gallary/:slug"/>
+        <Route component={Gallary} path="/gallary"/>
       </Switch>
     </Router>
   );

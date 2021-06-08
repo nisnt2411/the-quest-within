@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './Home.css';
 import NavBar from './NavBar';
 import Footer from './Footer';
+import Demo from './demo';
 class Home extends Component{
     constructor(props){
         super(props);
@@ -10,9 +11,7 @@ class Home extends Component{
         return(
             <div>
                 <NavBar/>
-                <div className="container-fluid home-div">
-                    <h1>Hello. I'm Nishant</h1>
-                </div>
+                <Demo/>
                 <Footer/>
             </div>
         )

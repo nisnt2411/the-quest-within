@@ -45,13 +45,6 @@ const Footer = (props) => {
                         </form>
                     </section>
                 </div>
-                <div className="text-center p-3">
-                    made with  
-                    <a href="#" className="btn btn-outline-light btn-floating m-1" role="button">
-                        <i className="fas fa-heart"></i>
-                    </a>
-                    by Nishant Charas
-                </div>
             </footer>
         </div>
     )

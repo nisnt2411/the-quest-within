@@ -1,6 +1,6 @@
-.post-card{
+.image-card{
     width: 25rem !important;
-    height: 25rem !important;
+    height: 18rem !important;
     margin-top: 10px !important;
     margin-left: 50px !important;
     margin-right: 5px !important;
@@ -8,24 +8,24 @@
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     background-color: rgba(255, 255, 255, 0.952);
 }
-.post-card:hover{
+.image-card:hover{
     background-color: rgb(228, 226, 226);
 }
+
 .card-img-top{
     width: 100% !important;
     height: 70% !important;
     object-fit: cover !important;
-    margin-top: 5% !important;
-    margin-bottom: 5% !important;
-}
-
-.post-description{
-    width: 300px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    margin-top: 2% !important;
+    margin-bottom: 2% !important;
 }
 
 .background{
-    background-color: rgba(0, 132, 255, 0.705)
+    background-color: #1d1d1d ;
+}
+
+.top{
+    background-color: white;
+    font-size: medium;
+    justify-content: center;
 }
