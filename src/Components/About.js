@@ -37,7 +37,7 @@ const About = props => {
                         </div>
                 </div>
                 <div className="card about-card mb-4">
-                        <img className="card-img-top-about" src="/images/me.jpg" alt="Me"/>
+                        <img className="card-img-top-about" src="/images/me.jpeg" alt="Me"/>
                         <div className="card-body">
                             <h3 className="card-title">Nishant Charas</h3>
                             <p className="card-text">Works at himself.</p>
