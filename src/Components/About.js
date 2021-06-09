@@ -12,7 +12,7 @@ const About = props => {
                 <h1>About Us</h1>
                 <p>We are anonymous! Kidding.</p>
                 <p className="italic">
-                    we like to share what we see and capture in our cameras. This site is entirely designed for that purpose only.If you have anything that you would like to see oon the site please connect with us and we will try to make it happen.
+                    we like to share what we see and capture in our cameras. This site is entirely designed for that purpose only.If you have anything that you would like to see on the site please connect with us and we will try to make it happen.
                     Thanks for visiting the site!
                 </p>
             </div>

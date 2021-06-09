@@ -33,10 +33,10 @@
 
 .card-img-top-about{
     width: 100% !important;
-    height: 40% !important;
+    height: 50% !important;
     object-fit: cover !important;
-    margin-top: 5% !important;
-    margin-bottom: 5% !important;
+    margin-top: 2% !important;
+    margin-bottom: 2% !important;
 }
 
   .about-section {
@@ -76,5 +76,5 @@
   }
 
   .about-background{
-    background-color: rgba(128, 128, 128, 0.274);
+    background-color:white;
   }

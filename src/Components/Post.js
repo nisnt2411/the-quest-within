@@ -31,8 +31,9 @@ const Post = props => {
         })
         .catch((error) => console.log(error))
     },[])
+    if(!postData) return <div>Loading...</div>
     return(
-        <div className="row background">
+        <div className="row background-post">
             <NavBar/>
             {postData && postData.map(post =>(
             <div onClick={()=>HandleRoute("/post/"+post.slug.current)} key={post.mainImage.asset._id} className="card post-card">

@@ -20,7 +20,7 @@
     margin-bottom: 2% !important;
 }
 
-.background{
+.background-gallary{
     background-color: #1d1d1d ;
 }
 
@@ -28,4 +28,8 @@
     background-color: white;
     font-size: medium;
     justify-content: center;
+}
+
+.image-card:hover{
+    transform: scale(1.07);
 }

@@ -32,8 +32,10 @@ const Gallary = props => {
         .catch(console.error)
     },[]);
 
+    if(!GallaryData) return <div>Loading...</div>
+
     return(
-        <div className="background">
+        <div className="background-gallary">
             <NavBar/>
             <div class="row">
                 {GallaryData && GallaryData.map(image =>(

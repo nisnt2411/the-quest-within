@@ -26,6 +26,6 @@
     text-overflow: ellipsis;
 }
 
-.background{
-    background-color: rgba(0, 132, 255, 0.705)
+.background-post{
+    background-color: white!important;
 }
