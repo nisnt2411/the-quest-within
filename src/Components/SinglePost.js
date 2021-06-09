@@ -1,13 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import sanityClient from '../client';
-import { useParams } from 'react-router-dom';
-import imageUrlBuilder from '@sanity/image-url';
+import { useParams, Link } from 'react-router-dom';
 import NavBar from './NavBar';
 import './SinglePost.css';
-
-const builder = imageUrlBuilder(sanityClient);
-
-const urlFor = source => (builder.image(source));
 
 const SinglePost = props => {
     const [singlePost, setSinglePost] = useState(null);
@@ -43,12 +38,15 @@ const SinglePost = props => {
             <NavBar/>
             <div className="container-fluid">
                 <div className="container img-container">
-                    <img src={singlePost.mainImage.asset.url} alt="#" className="img-fluid"/>
+                    <img src={singlePost.mainImage.asset.url} alt={singlePost.title} className="img-fluid"/>
                 </div>
                 <div className="container description">
                 <h3 className="title">{singlePost.title}</h3>
-                <p>{singlePost.description}</p>
-                </div>                
+                <p className="paragraph">{singlePost.description}</p>
+                </div>
+                <div className="bottom">
+                    <Link to="/post"><button className="btn btn-info btn-block">Go Back</button></Link> 
+                </div>            
             </div>
         </div>
         

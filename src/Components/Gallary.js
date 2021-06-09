@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Link, useHistory, withRouter } from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 import sanityClient from '../client.js';
 import NavBar from './NavBar';
 import './Gallary.css';
@@ -37,15 +37,18 @@ const Gallary = props => {
     return(
         <div className="background-gallary">
             <NavBar/>
-            <div class="row">
+            <div className="row">
+            <div className="gallary-section">
+                <h3>welcome to our Image Gallary</h3>
+            </div>
                 {GallaryData && GallaryData.map(image =>(
                     <div onClick={()=>HandleRoute("/gallary/"+image.slug.current)} key={image.mainImage.asset._id} className="card image-card">
                     <img className="card-img-top" src={image.mainImage.asset.url} alt={image.mainImage.alt}/>
                     <div className="card-body">
-                        <h5 className="card-title">{image.title}</h5>
+                        <h5 className="card-title-gallary">{image.title}</h5>
                     </div>
                     <figure>
-                        <figcaption class="blockquote-footer">
+                        <figcaption className="blockquote-footer">
                              <cite title="Source Title">{image.credit}</cite>
                         </figcaption>
                     </figure>

@@ -1,25 +1,23 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import NavBar from './NavBar';
 import Footer from './Footer';
 import './About.css';
 
 const About = props => {
     return(
-        <div className="">
+        <div className="about">
             <NavBar/>
             <div className="about-section">
                 <h1>About Us</h1>
                 <p>We are anonymous! Kidding.</p>
                 <p className="italic">
-                    we like to share what we see and capture in our cameras. This site is entirely designed for that purpose only.If you have anything that you would like to see on the site please connect with us and we will try to make it happen.
-                    Thanks for visiting the site!
+                This is a place where i share photos and stories that i like. This website is a personal project which i did for fun and learing purpose. This site is still under development, so while surfing the site if you find any bug or want to suggest anything in general please reach out to me as my various handles are given below.
                 </p>
             </div>
             <h2 className="team-heading">Our Team</h2>
             <div className="row about-background">
                 <div className="card about-card mb-4">
-                        <img className="card-img-top-about" src="/images/elon_musk.jpeg" alt="#"/>
+                        <img className="card-img-top-about" src="/images/elon_musk.jpeg" alt="Elon Musk"/>
                         <div className="card-body">
                             <h3 className="card-title">Elon Musk</h3>
                             <p className="card-text"> CEO & Founder of Tesla</p>
@@ -29,7 +27,7 @@ const About = props => {
                         </div>
                 </div>
                 <div className="card about-card mb-4">
-                        <img className="card-img-top-about" src="/images/doge.jpeg" alt="#"/>
+                        <img className="card-img-top-about" src="/images/doge.jpeg" alt="Mr Doge"/>
                         <div className="card-body">
                             <h3 className="card-title">Mr. Doge</h3>
                             <p className="card-text">Works at Cryptolabs</p>
@@ -39,7 +37,7 @@ const About = props => {
                         </div>
                 </div>
                 <div className="card about-card mb-4">
-                        <img className="card-img-top-about" src="/images/me.jpg" alt="#"/>
+                        <img className="card-img-top-about" src="/images/me.jpg" alt="Me"/>
                         <div className="card-body">
                             <h3 className="card-title">Nishant Charas</h3>
                             <p className="card-text">Works at himself.</p>

@@ -4,6 +4,7 @@
 
 .team-heading{
     text-align: center;
+    color: rgba(17, 33, 34, 0.637);
 }
   
   html {
@@ -27,7 +28,7 @@
     margin-top: 10px !important;
     margin-left: 50px !important;
     margin-right: 5px !important;
-    margin-bottom: 10px !important;
+    margin-bottom: 20px !important;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
@@ -42,13 +43,13 @@
   .about-section {
     padding: 50px;
     text-align: center;
-    background-color: #474e5d;
     color: white;
   }
   
   .container {
     padding: 0 16px;
   }
+
   
   
   .title {
@@ -75,6 +76,19 @@
     justify-content: center;
   }
 
-  .about-background{
-    background-color:white;
+  .about{
+    background-image: url("../Images/back2.jpg");
+  }
+
+  .about-section h1{
+    font-family: fantasy ;
+  }
+
+  .about-section p{
+    font-family:monospace;
+    font-size: 20px;
+  }
+
+  .about h2{
+    font-family: fantasy;
   }

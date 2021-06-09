@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Link, useHistory, withRouter } from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 import sanityClient from '../client.js';
 import NavBar from './NavBar';
 import './Post.css';
@@ -35,11 +35,14 @@ const Post = props => {
     return(
         <div className="row background-post">
             <NavBar/>
+            <div className="post-section">
+                <h3>Recent posts...</h3>
+            </div>
             {postData && postData.map(post =>(
             <div onClick={()=>HandleRoute("/post/"+post.slug.current)} key={post.mainImage.asset._id} className="card post-card">
                 <img className="card-img-top" src={post.mainImage.asset.url} alt={post.mainImage.alt}/>
                 <div className="card-body">
-                    <h5 className="card-title">{post.title}</h5>
+                    <h5 className="card-title-post">{post.title}</h5>
                     <p className="post-description">{post.description}</p>
                 </div>
             </div>

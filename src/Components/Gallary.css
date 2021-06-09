@@ -20,10 +20,6 @@
     margin-bottom: 2% !important;
 }
 
-.background-gallary{
-    background-color: #1d1d1d ;
-}
-
 .top{
     background-color: white;
     font-size: medium;
@@ -33,3 +29,13 @@
 .image-card:hover{
     transform: scale(1.07);
 }
+
+.gallary-section {
+    padding: 50px;
+    text-align: center;
+    font-family: fantasy;
+  }
+
+  .card-title-gallary{
+      font-family: cursive;
+  }

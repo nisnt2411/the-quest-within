@@ -4,7 +4,7 @@ import './Footer.css';
 const Footer = (props) => {
     return(
         <div>
-            <footer className="bg-dark text-center text-white">
+            <footer className="bg text-center text-white">
                 <div className="container p-4">
                     <section className="mb-4">
                         <a href="https://www.facebook.com/nisnt2411" className="btn btn-outline-light btn-floating m-1" role="button">

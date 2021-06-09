@@ -1,6 +1,6 @@
 .post-card{
     width: 25rem !important;
-    height: 25rem !important;
+    height: 20rem !important;
     margin-top: 10px !important;
     margin-left: 50px !important;
     margin-right: 5px !important;
@@ -28,4 +28,24 @@
 
 .background-post{
     background-color: white!important;
+    background-image: url("../Images/back2.jpg");
+}
+
+.post-section {
+    margin-top: 10px;
+    padding: 50px;
+    text-align: center;
+    font-family: fantasy;
+  }
+
+.post-card h5{
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.post-card p{
+    font-family: fantasy;
+}
+
+.post-card:hover{
+    transform: scale(1.05);
 }
