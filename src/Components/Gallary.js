@@ -37,25 +37,16 @@ const Gallary = props => {
     return(
         <div className="background-gallary">
             <NavBar/>
-            <div className="row">
             <div className="gallary-section">
                 <h3>welcome to our Image Gallary</h3>
             </div>
+            <div className="row">
                 {GallaryData && GallaryData.map(image =>(
-                    <div onClick={()=>HandleRoute("/gallary/"+image.slug.current)} key={image.mainImage.asset._id} className="card image-card">
-                    <img className="card-img-top" src={image.mainImage.asset.url} alt={image.mainImage.alt}/>
-                    <div className="card-body">
-                        <h5 className="card-title-gallary">{image.title}</h5>
-                    </div>
-                    <figure>
-                        <figcaption className="blockquote-footer">
-                             <cite title="Source Title">{image.credit}</cite>
-                        </figcaption>
-                    </figure>
+                    <div onClick={()=>HandleRoute("/gallary/"+image.slug.current)} key={image.mainImage.asset._id} className="col-md-3">
+                        <img className="single-image" src={image.mainImage.asset.url} alt={image.title}/>
                     </div>
                 ))
                 }
-
             </div>
         </div>
     )

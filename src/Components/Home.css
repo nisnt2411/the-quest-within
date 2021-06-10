@@ -6,15 +6,16 @@
 
   .home-section h1{
       font-family: cursive;
-      font-size: 100px;
+      font-size: 10vw;
   }
 
   .home-section p{
       font-family: fantasy;
-      font-size: x-large;
+      font-size: 3vw;
   }
   .home-body{
       margin-top: 10px;
+      justify-content: center;
   }
 
   .home-card{

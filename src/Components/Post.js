@@ -33,20 +33,21 @@ const Post = props => {
     },[])
     if(!postData) return <div>Loading...</div>
     return(
-        <div className="row background-post">
+        <div>
             <NavBar/>
             <div className="post-section">
                 <h3>Recent posts...</h3>
             </div>
+            <div class="container-fluid">
+            <div className="row">
             {postData && postData.map(post =>(
-            <div onClick={()=>HandleRoute("/post/"+post.slug.current)} key={post.mainImage.asset._id} className="card post-card">
+                <div onClick={()=>HandleRoute("/post/"+post.slug.current)} key={post.mainImage.asset._id}  class="col-md-3 post">
                 <img className="card-img-top" src={post.mainImage.asset.url} alt={post.mainImage.alt}/>
-                <div className="card-body">
-                    <h5 className="card-title-post">{post.title}</h5>
-                    <p className="post-description">{post.description}</p>
-                </div>
+                <h5 className="card-title-post">{post.title}</h5>
             </div>
             ))}
+            </div>
+            </div>
         </div>
     )
 }

@@ -1,26 +1,11 @@
-.post-card{
-    width: 25rem !important;
-    height: 20rem !important;
-    margin-top: 10px !important;
-    margin-left: 50px !important;
-    margin-right: 5px !important;
-    margin-bottom: 10px !important;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    background-color: rgba(255, 255, 255, 0.952);
-}
-.post-card:hover{
-    background-color: rgb(228, 226, 226);
-}
+
 .card-img-top{
-    width: 100% !important;
-    height: 70% !important;
-    object-fit: cover !important;
-    margin-top: 5% !important;
-    margin-bottom: 5% !important;
+    width: 100%;
+    height: 100%;
 }
 
 .post-description{
-    width: 300px;
+    width: 250px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -38,14 +23,12 @@
     font-family: fantasy;
   }
 
-.post-card h5{
-    font-family: 'Times New Roman', Times, serif;
-}
-
-.post-card p{
-    font-family: fantasy;
-}
-
 .post-card:hover{
     transform: scale(1.05);
+}
+
+.post{
+    margin-left: 5px;
+    margin-bottom: 5px;
+    border: 1px solid;
 }

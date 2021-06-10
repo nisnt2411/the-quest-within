@@ -18,7 +18,7 @@ const SingleImage = props => {
                     url
                 }
             },
-            description,
+            credit,
             "name": author->name,
             "authorImage": author->image
         }`)
@@ -41,7 +41,15 @@ const SingleImage = props => {
                     <img src={singleImage.mainImage.asset.url} alt={singleImage.title} className="img-fluid"/>
                 </div>
                 <div className="container description">
-                </div>  
+                    <h4>{singleImage.title}</h4>
+                    <div className="credit">
+                    <figure>
+                    <figcaption className="blockquote-footer">
+                        <cite title="Source Title">{singleImage.credit}</cite>
+                    </figcaption>
+                    </figure>
+                    </div>
+                 </div>
                 <div className="bottom">
                     <Link to="/gallary"><button className="btn btn-info btn-block">Go Back</button></Link> 
                 </div>                  
