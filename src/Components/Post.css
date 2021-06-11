@@ -23,12 +23,15 @@
     font-family: fantasy;
   }
 
-.post-card:hover{
-    transform: scale(1.05);
+.post:hover{
+    transform: scale(1.01);
 }
 
 .post{
+    border: 2px solid rgba(0, 0, 0, 0.267);
     margin-left: 5px;
+    margin-right: 5px;
     margin-bottom: 5px;
-    border: 1px solid;
+    margin-top: 5px;
 }
+

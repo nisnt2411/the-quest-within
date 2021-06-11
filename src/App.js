@@ -5,7 +5,8 @@ import About from './Components/About';
 import SinglePost from './Components/SinglePost';
 import Post from './Components/Post';
 import Gallary from './Components/Gallary';
-import SingleImage from './Components/SingleImage'
+import SingleImage from './Components/SingleImage';
+import Demo from './Components/Demo';
  const App = props => {
   return (
     <Router>
@@ -16,6 +17,7 @@ import SingleImage from './Components/SingleImage'
         <Route component={Post} path="/post" />
         <Route component={SingleImage} path="/gallary/:slug"/>
         <Route component={Gallary} path="/gallary"/>
+        <Route component={Demo} path="/demo"/>
       </Switch>
     </Router>
   );

@@ -35,16 +35,12 @@ const Gallary = props => {
     if(!GallaryData) return <div>Loading...</div>
 
     return(
-        <div className="background-gallary">
+        <div>
             <NavBar/>
-            <div className="gallary-section">
-                <h3>welcome to our Image Gallary</h3>
-            </div>
-            <div className="row">
-                {GallaryData && GallaryData.map(image =>(
-                    <div onClick={()=>HandleRoute("/gallary/"+image.slug.current)} key={image.mainImage.asset._id} className="col-md-3">
-                        <img className="single-image" src={image.mainImage.asset.url} alt={image.title}/>
-                    </div>
+            <h1>Welcome to our Image Gallery</h1><hr/>
+            <div id="gallery"  className="container-fluid">
+            {GallaryData && GallaryData.map(image =>(
+            <img onClick={()=>HandleRoute("/gallary/"+image.slug.current)} key={image.mainImage.asset._id} src={image.mainImage.asset.url} alt={image.mainImage.title} className="img-responsive"/>
                 ))
                 }
             </div>
