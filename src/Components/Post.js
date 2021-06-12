@@ -32,24 +32,36 @@ const Post = props => {
         .catch((error) => console.log(error))
     },[])
     if(!postData) return <div>Loading...</div>
+
     return(
         <div>
             <NavBar/>
-            <div className="post-section">
-                <h3>Recent posts...</h3>
-            </div>
-            <div class="container-fluid">
-            <div className="row">
-            {postData && postData.map(post =>(
-                <div onClick={()=>HandleRoute("/post/"+post.slug.current)} key={post.mainImage.asset._id}  class="col-md-3 post">
-                <img className="card-img-top" src={post.mainImage.asset.url} alt={post.mainImage.alt}/>
-                <h5 className="card-title-post">{post.title}</h5>
-            </div>
+            <div class="container">
+            <h1>Recent Posts...</h1><hr/>
+          <div class="grid-row">
+          {postData && postData.map(post =>(
+                          <div onClick={()=>HandleRoute("/post/"+post.slug.current)} key={post.mainImage.asset._id}  class="grid-item">
+                          <div class="grid-item-wrapper">
+                            <div class="grid-item-container">
+                              <div class="grid-image-top rex-ray">
+                              <img className="img-post" src={post.mainImage.asset.url} alt=""/>
+                              </div>
+                              <div class="grid-item-content">
+                                <span class="item-title">{post.title}</span>
+                                <span class="item-category">Infrastructure as Code</span>
+                                <span class="item-excerpt">
+                                    {post.description}
+                                </span>
+                                <span class="more-info">Read more <i class="fas fa-long-arrow-alt-right"></i></span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
             ))}
-            </div>
-            </div>
         </div>
-    )
+        </div>
+        </div>
+    );
 }
 
 export default withRouter(Post);

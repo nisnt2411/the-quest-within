@@ -3,63 +3,63 @@ import { withRouter } from 'react-router-dom';
 import sanityClient from '../client.js';
 import NavBar from './NavBar';
 import './Demo.css';
-
+//                     <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80" alt=""/>
 const Demo = props => {
-    const [GallaryData, setGallary] = useState(null);
+    const [postData, setPost] = useState(null);
 
     function HandleRoute (path) {
         props.history.push(path)
     }
-
     useEffect(() => {
         sanityClient
-        .fetch(`*[_type == "gallary"]{
-            title,
-            slug,
-            mainImage{
-                asset->{
-                    url,
-                    _id
+        .fetch(
+            `*[_type == "post"]{
+                title,
+                slug,
+                mainImage{
+                    asset->{
+                        _id,
+                        url
+                    },
+                    alt
                 },
-                alt
-            },
-            credit
-        }`)
+                description
+            }`
+        )
         .then((data) => {
-            console.log(data);
-            setGallary(data);
+            setPost(data);
         })
-        .catch(console.error)
-    },[]);
-
-    if(!GallaryData) return <div>Loading...</div>
+        .catch((error) => console.log(error))
+    },[])
+    if(!postData) return <div>Loading...</div>
 
     return(
-        <div className="">
-                        <NavBar/>
-            <h1>Responsive Image Gallery</h1><hr/>
-            <div id="gallery"  class="container-fluid">  
-  <img src="https://source.unsplash.com/1600x1200?female,portrait" class="img-responsive"/>
-  <img src="https://source.unsplash.com/1024x768?female,portrait" class="img-responsive"/>
-   <img src="https://source.unsplash.com/1366x768?female,portrait" class="img-responsive"/>
-  <img src="https://source.unsplash.com/1920x1080?female,portrait" class="img-responsive"/>
-  <img src="https://source.unsplash.com/640x360?female,portrait" class="img-responsive"/>
-<img src="https://source.unsplash.com/320x640?female,portrait" class="img-responsive"/>
-  <img src="https://source.unsplash.com/1200x1600?female,portrait" class="card img-responsive"/>
-  <img src="https://source.unsplash.com/800x600?female,portrait" class="img-responsive"/>
-  <img src="https://source.unsplash.com/600x800?female,portrait" class="img-responsive"/>
-  <img src="https://source.unsplash.com/400x600?female,portrait" class="img-responsive"/>
-  <img src="https://source.unsplash.com/600x400?female,portrait" class="img-responsive"/>
-<img src="https://source.unsplash.com/1100x1600?female,portrait" class="img-responsive"/>
-<img src="https://source.unsplash.com/1600x1100?female,portrait" class="img-responsive"/>
-<img src="https://source.unsplash.com/992x768?female,portrait" class="img-responsive"/>
-<img src="https://source.unsplash.com/768x992?female,portrait" class="img-responsive"/>
-<img src="/images/elon_musk.jpeg" class="img-responsive"/>
-<img src="/images/me.jpeg" class="img-responsive"/>
-<img src="/images/doge.jpeg" class="img-responsive"/>
-<img src="/images/my_photo.jpg" class="img-responsive"/>
-</div>
-</div>
+        <div>
+            <NavBar/>
+            <div class="container">
+          <div class="grid-row">
+          {postData && postData.map(post =>(
+                          <div onClick={()=>HandleRoute("/post/"+post.slug.current)} key={post.mainImage.asset._id}  class="grid-item">
+                          <div class="grid-item-wrapper">
+                            <div class="grid-item-container">
+                              <div class="grid-image-top rex-ray">
+                              <img className="img-post" src={post.mainImage.asset.url} alt=""/>
+                              </div>
+                              <div class="grid-item-content">
+                                <span class="item-title">{post.title}</span>
+                                <span class="item-category">Infrastructure as Code</span>
+                                <span class="item-excerpt">
+                                    {post.description}
+                                </span>
+                                <span class="more-info">Read more <i class="fas fa-long-arrow-alt-right"></i></span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+            ))}
+        </div>
+        </div>
+        </div>
     );
 }
 export default withRouter(Demo);
