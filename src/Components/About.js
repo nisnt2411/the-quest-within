@@ -31,17 +31,17 @@ const About = props => {
                             <p>Some random text that you would hate to read.</p>
                             <div className="d-flex flex-row justify-content-center">
                                 <div className="p-4">
-                                    <a href="#">
+                                    <a href="https://www.facebook.com/nisnt2411">
                                         <i className="fab fa-facebook-f"></i>
                                     </a>
                                 </div>
                                 <div className="p-4">
-                                    <a href="#">
+                                    <a href="https://www.facebook.com/nisnt2411">
                                         <i className="fab fa-twitter"></i>
                                     </a>
                                 </div>
                                 <div className="p-4">
-                                    <a href="#">
+                                    <a href="https://www.facebook.com/nisnt2411">
                                         <i className="fab fa-instagram"></i>
                                     </a>
                                 </div>
@@ -61,17 +61,17 @@ const About = props => {
                             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi, recusandae.</p>
                             <div className="d-flex flex-row justify-content-center">
                                 <div className="p-4">
-                                    <a href="#">
+                                    <a href="https://www.facebook.com/nisnt2411">
                                         <i className="fab fa-facebook-f"></i>
                                     </a>
                                 </div>
                                 <div className="p-4">
-                                    <a href="#">
+                                    <a href="https://www.facebook.com/nisnt2411">
                                         <i className="fab fa-twitter"></i>
                                     </a>
                                 </div>
                                 <div className="p-4">
-                                    <a href="#">
+                                    <a href="https://www.facebook.com/nisnt2411">
                                         <i className="fab fa-instagram"></i>
                                     </a>
                                 </div>
@@ -91,17 +91,17 @@ const About = props => {
                             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi, recusandae.</p>
                             <div className="d-flex flex-row justify-content-center">
                                 <div className="p-4">
-                                    <a href="#">
+                                    <a href="https://www.facebook.com/nisnt2411">
                                         <i className="fab fa-facebook-f"></i>
                                     </a>
                                 </div>
                                 <div className="p-4">
-                                    <a href="#">
+                                    <a href="https://www.facebook.com/nisnt2411">
                                         <i className="fab fa-twitter"></i>
                                     </a>
                                 </div>
                                 <div className="p-4">
-                                    <a href="#">
+                                    <a href="https://www.facebook.com/nisnt2411">
                                         <i className="fab fa-instagram"></i>
                                     </a>
                                 </div>
@@ -121,17 +121,17 @@ const About = props => {
                             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi, recusandae.</p>
                             <div className="d-flex flex-row justify-content-center">
                                 <div className="p-4">
-                                    <a href="#">
+                                    <a href="https://www.facebook.com/nisnt2411">
                                         <i className="fab fa-facebook-f"></i>
                                     </a>
                                 </div>
                                 <div className="p-4">
-                                    <a href="#">
+                                    <a href="https://www.facebook.com/nisnt2411">
                                         <i className="fab fa-twitter"></i>
                                     </a>
                                 </div>
                                 <div className="p-4">
-                                    <a href="#">
+                                    <a href="https://www.facebook.com/nisnt2411">
                                         <i className="fab fa-instagram"></i>
                                     </a>
                                 </div>
