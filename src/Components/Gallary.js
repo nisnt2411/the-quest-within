@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { withRouter } from 'react-router-dom';
 import sanityClient from '../client.js';
 import NavBar from './NavBar';
+import Loader from './Loader';
 import './Gallary.css';
 
 const Gallary = props => {
@@ -32,7 +33,7 @@ const Gallary = props => {
         .catch(console.error)
     },[]);
 
-    if(!GallaryData) return <div>Loading...</div>
+    if(!GallaryData) return <Loader/>
 
     return(
         <div>

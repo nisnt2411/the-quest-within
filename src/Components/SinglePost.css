@@ -25,3 +25,8 @@
     text-align: center;
     margin-bottom: 5px;
 }
+
+.more-posts{
+    text-align: right;
+    text-decoration: none;
+}

@@ -14,7 +14,7 @@ const About = props => {
                 <div className="col">
                     <h1>Our Team</h1>
                     <p className="my-3">
-                        Our team only consists of me as of now but still to make site look better
+                        Our team only consists of me but still to make site look better
                         i have added some random team mates with different roles.
                     </p>
                 </div>
@@ -84,10 +84,10 @@ const About = props => {
                     <div className="card h-100">
                         <div className="card-body">
                             <img className="img-fouild rounded w-75 mb-3"
-                                src="https://images.unsplash.com/photo-1592023031338-ee30ef94abbc?ixid=MXwxMjA3fDB8MHxzZWFyY2h8N3x8aHVtYW4lMjBtYW58ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                                src="images/new.jpg"
                                 alt="Brad"/>
-                            <h3>Brad Smith</h3>
-                            <h5>Scrum Master</h5>
+                            <h3>Nishant</h3>
+                            <h5>Developer</h5>
                             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi, recusandae.</p>
                             <div className="d-flex flex-row justify-content-center">
                                 <div className="p-4">

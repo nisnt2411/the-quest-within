@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import sanityClient from '../client';
-import { useParams, Link } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import NavBar from './NavBar';
+import Loader from './Loader';
 import './SinglePost.css';
 
 const SinglePost = props => {
@@ -29,25 +30,40 @@ const SinglePost = props => {
         return(
             <div>
                 <NavBar/>
-                <div>Loading...</div>
+                <Loader/>
             </div>
         )
     }
     return(
         <div>
             <NavBar/>
-            <div className="container-fluid">
-                <div className="container img-container">
-                    <img src={singlePost.mainImage.asset.url} alt={singlePost.title} className="img-fluid"/>
-                </div>
-                <div className="container description">
-                <h3 className="title">{singlePost.title}</h3>
-                <p className="paragraph">{singlePost.description}</p>
-                </div>
-                <div className="bottom">
-                    <Link to="/post"><button className="btn btn-info btn-block">Go Back</button></Link> 
-                </div>            
-            </div>
+<div className="wrap">
+    <aside className="sidebar">
+    <div className="widget">
+      <h2>Nishant</h2>
+      <p>Hello, my name’s Nishant. I’m 21 years old. I work as a Web Designer.<br/> myself@gmail.com</p>
+      </div>
+      <div className="widget">
+      <h2>{singlePost.title}</h2>
+      </div>
+  </aside>
+    <div className="blog">
+          <div className="conteudo">
+          <div className="post-info">
+            Posted by Nishant
+          </div>
+          <img className="card-img-top" src={singlePost.mainImage.asset.url} alt={singlePost.title}/>
+          <h1>{singlePost.title}</h1>
+          <hr/>
+          <p>
+            {singlePost.description}
+          </p>
+          <div className="more-posts">
+              <a href="/post">See more posts</a>
+          </div>
+        </div>
+  </div>
+</div>
         </div>
         
     )

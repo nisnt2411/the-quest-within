@@ -38,20 +38,13 @@ const SingleImage = props => {
             <NavBar/>
             <div className="container-fluid">
                 <div className="container img-container">
-                    <img src={singleImage.mainImage.asset.url} alt={singleImage.title} className="img-fluid"/>
+                <img className="single-img" src={singleImage.mainImage.asset.url} alt="Mars Curiosity Rover takes an excellent selfie."/>
                 </div>
                 <div className="container description">
                     <h4>{singleImage.title}</h4>
-                    <div className="credit">
-                    <figure>
-                    <figcaption className="blockquote-footer">
-                        <cite title="Source Title">{singleImage.credit}</cite>
-                    </figcaption>
-                    </figure>
-                    </div>
                  </div>
                 <div className="bottom">
-                    <Link to="/gallary"><button className="btn btn-info btn-block">Go Back</button></Link> 
+                    <Link to="/gallary"><button className="btn go-back-btn btn-block">Go Back</button></Link> 
                 </div>                  
             </div>
         </div>

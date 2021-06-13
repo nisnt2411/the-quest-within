@@ -1,8 +1,36 @@
-.description{
-    padding: 10px;
-}
+/* Set box-sizing - ignore */
+html {
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+  
+  /* Layout For Smaller Screens */
+  .single-img {
+    display: block;
+    margin: 0 auto 0 auto; /* Centred */
+    width: 100%;
+    margin-top: 10px;
+  }
+  
+  /* Layout For Larger Screens */
+  @media screen and (min-width: 40em) {
+    .single-img {
+      padding: 0 2em 0 2em;
+      width: 66.6%;
+    }
+  }
 
-.credit{
-    padding: 10px;
-    justify-content: right;
+  .description{
+      text-align: center;
+      margin-top: 10px;
+  }
+
+.go-back-btn{
+    margin-top: 20px;
+    color: white !important;
+    background-color: tomato !important;
+    border-radius: 50px !important;
+    border-radius: 2px solid;
 }
