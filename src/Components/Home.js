@@ -43,7 +43,7 @@ const Home = props => {
     <aside className="sidebar">
     <div className="widget">
       <h2>Nishant</h2>
-      <p>Hello, my name’s Nishant. I’m 21 years old. I work as a Web Designer.<br/> myself@gmail.com</p>
+      <p>Hello, my name’s Nishant. I’m 21 years old. I work as a Web Developer.<br/> myself@gmail.com</p>
       </div>
       <div className="widget">
       <h2>Quote of the day</h2>

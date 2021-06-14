@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { withRouter } from 'react-router-dom';
+import { withRouter, Link } from 'react-router-dom';
 import sanityClient from '../client.js';
 import NavBar from './NavBar';
 import Loader from './Loader';
@@ -24,10 +24,12 @@ const Post = props => {
                     },
                     alt
                 },
-                description
+                description,
+                _createdAt
             }`
         )
         .then((data) => {
+            console.log(data)
             setPost(data);
         })
         .catch((error) => console.log(error))
@@ -37,30 +39,22 @@ const Post = props => {
     return(
         <div>
             <NavBar/>
-            <div className="container">
-            <h1>Recent Posts...</h1><hr/>
-          <div className="grid-row">
-          {postData && postData.map(post =>(
-                          <div onClick={()=>HandleRoute("/post/"+post.slug.current)} key={post.mainImage.asset._id}  className="grid-item">
-                          <div className="grid-item-wrapper">
-                            <div className="grid-item-container">
-                              <div className="grid-image-top rex-ray">
-                              <img className="img-post" src={post.mainImage.asset.url} alt=""/>
-                              </div>
-                              <div className="grid-item-content">
-                                <span className="item-title">{post.title}</span>
-                                <span className="item-category">Infrastructure as Code</span>
-                                <span className="item-excerpt">
-                                    {post.description}
-                                </span>
-                                <span className="more-info">Read more <i class="fas fa-long-arrow-alt-right"></i></span>
-                              </div>
-                            </div>
-                          </div>
+            <h1>Recent Posts...</h1>
+            <div class="wrap-post">
+                {postData && postData.map(post => (
+                      <div class="box" onClick={()=>HandleRoute("/post/"+post.slug.current)} key={post.mainImage.asset._id}>
+                      <div class="box-top">
+                        <img class="box-image" src={post.mainImage.asset.url} alt={post.title}/>
+                        <div class="title-flex">
+                          <h4 class="box-title">{post.title}</h4>
+                          <p class="user-follow-info date">{post._createdAt}</p>
                         </div>
-            ))}
-        </div>
-        </div>
+                        <p class="description">{post.description}</p>
+                      </div>
+                      <Link class="button a"><a className="a" href="#" >Read More</a></Link>
+                    </div>
+                ))}
+            </div>
         </div>
     );
 }

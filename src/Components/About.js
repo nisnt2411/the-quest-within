@@ -16,6 +16,12 @@ const About = props => {
                     <p className="my-3">
                         Our team only consists of me but still to make site look better
                         i have added some random team mates with different roles.
+                        To be honest i am looking for potential team mates who could help me in getting new pictures and ideas
+                        in general. So if you think you want to be a part you are more than welcome to come onboard.
+                        The site is still under developement, a lot of features and content are yet to be added for which i will need your support.
+                        So if you have any photos (clicked personally and not downloaded from the internet) that you would like to see on the website please send it to me and i will make sure it is posted here.
+                        At last it is a pesonal project made for fun and learing purpose, so if you find any bugs or want to suggest any features i will be more than happy to hear you.
+                        Thanks for coming to the site!
                     </p>
                 </div>
             </div>
@@ -24,10 +30,10 @@ const About = props => {
                     <div className="card h-100">
                         <div className="card-body">
                             <img className="img-fouild rounded w-75 mb-3"
-                                src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80"
+                                src="images/doge.jpg"
                                 alt="Nishant"/>
-                            <h3>Moon</h3>
-                            <h5>Software Engineer</h5>
+                            <h3>Doge</h3>
+                            <h5>Crypto God</h5>
                             <p>Some random text that you would hate to read.</p>
                             <div className="d-flex flex-row justify-content-center">
                                 <div className="p-4">
@@ -54,11 +60,41 @@ const About = props => {
                     <div className="card h-100">
                         <div className="card-body">
                             <img className="img-fouild rounded w-75 mb-3"
-                                src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80"
+                                src="images/vader.jpg"
                                 alt="lucy"/>
-                            <h3>Lucy Sanchez</h3>
-                            <h5>FrontEnd Developer</h5>
-                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi, recusandae.</p>
+                            <h3>Darth Vader</h3>
+                            <h5>He is the father</h5>
+                            <p>Some random text that you would hate to read.</p>
+                            <div className="d-flex flex-row justify-content-center">
+                                <div className="p-4">
+                                    <a href="https://www.facebook.com/nisnt2411">
+                                        <i className="fab fa-facebook-f"></i>
+                                    </a>
+                                </div>
+                                <div className="p-4">
+                                    <a href="https://www.facebook.com/nisnt2411">
+                                        <i className="fab fa-twitter"></i>
+                                    </a>
+                                </div>
+                                <div className="p-4">
+                                    <a href="https://www.facebook.com/nisnt2411">
+                                        <i className="fab fa-instagram"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div className="col-lg-3 col-md-6 pt-1">
+                    <div className="card h-100">
+                        <div className="card-body">
+                            <img className="img-fouild rounded w-75 mb-3"
+                                src="images/rick.jpg"
+                                alt="Brad"/>
+                            <h3>Rick Sanchez</h3>
+                            <h5>Scientist</h5>
+                            <p>Some random text that you would hate to read.</p>
                             <div className="d-flex flex-row justify-content-center">
                                 <div className="p-4">
                                     <a href="https://www.facebook.com/nisnt2411">
@@ -85,40 +121,10 @@ const About = props => {
                         <div className="card-body">
                             <img className="img-fouild rounded w-75 mb-3"
                                 src="images/new.jpg"
-                                alt="Brad"/>
-                            <h3>Nishant</h3>
-                            <h5>Developer</h5>
-                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi, recusandae.</p>
-                            <div className="d-flex flex-row justify-content-center">
-                                <div className="p-4">
-                                    <a href="https://www.facebook.com/nisnt2411">
-                                        <i className="fab fa-facebook-f"></i>
-                                    </a>
-                                </div>
-                                <div className="p-4">
-                                    <a href="https://www.facebook.com/nisnt2411">
-                                        <i className="fab fa-twitter"></i>
-                                    </a>
-                                </div>
-                                <div className="p-4">
-                                    <a href="https://www.facebook.com/nisnt2411">
-                                        <i className="fab fa-instagram"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div className="col-lg-3 col-md-6 pt-1">
-                    <div className="card h-100">
-                        <div className="card-body">
-                            <img className="img-fouild rounded w-75 mb-3"
-                                src="https://images.unsplash.com/photo-1552058544-f2b08422138a?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTd8fGh1bWFufGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
                                 alt="andres"/>
-                            <h3>Tom Rogers</h3>
-                            <h5>Software Engineer</h5>
-                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi, recusandae.</p>
+                            <h3>Nishant</h3>
+                            <h5>Web Developer</h5>
+                            <p>Some random text that you would hate to read.</p>
                             <div className="d-flex flex-row justify-content-center">
                                 <div className="p-4">
                                     <a href="https://www.facebook.com/nisnt2411">
