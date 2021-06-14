@@ -29,7 +29,6 @@ const Post = props => {
             }`
         )
         .then((data) => {
-            console.log(data)
             setPost(data);
         })
         .catch((error) => console.log(error))
@@ -40,18 +39,18 @@ const Post = props => {
         <div>
             <NavBar/>
             <h1>Recent Posts...</h1>
-            <div class="wrap-post">
+            <div className="wrap-post">
                 {postData && postData.map(post => (
-                      <div class="box" onClick={()=>HandleRoute("/post/"+post.slug.current)} key={post.mainImage.asset._id}>
-                      <div class="box-top">
-                        <img class="box-image" src={post.mainImage.asset.url} alt={post.title}/>
-                        <div class="title-flex">
-                          <h4 class="box-title">{post.title}</h4>
-                          <p class="user-follow-info date">{post._createdAt}</p>
+                      <div className="box" onClick={()=>HandleRoute("/post/"+post.slug.current)} key={post.mainImage.asset._id}>
+                      <div className="box-top">
+                        <img className="box-image" src={post.mainImage.asset.url} alt={post.title}/>
+                        <div className="title-flex">
+                          <h4 className="box-title">{post.title}</h4>
+                          <p className="user-follow-info date">{post._createdAt}</p>
                         </div>
-                        <p class="description">{post.description}</p>
+                        <p className="description">{post.description}</p>
                       </div>
-                      <Link class="button a"><a className="a" href="#" >Read More</a></Link>
+                      <Link to={"/post/"+post.slug.current} className="button a">Read More</Link>
                     </div>
                 ))}
             </div>
