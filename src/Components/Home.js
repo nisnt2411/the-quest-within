@@ -37,7 +37,7 @@ const Home = props => {
   },[])
   if(!postData) return <Loader/>
     return(
-        <div>
+        <div classname="home">
             <NavBar/>
 <div className="wrap">
     <aside className="sidebar">

@@ -32,6 +32,11 @@ export default {
       },
     },
     {
+      name: 'date',
+      title: 'Date',
+      type: 'string'
+    },
+    {
       name: 'description',
       title: 'Description',
       type: 'text',

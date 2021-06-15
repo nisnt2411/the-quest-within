@@ -21,7 +21,7 @@ const Post = props => {
                     alt
                 },
                 description,
-                _createdAt
+                date
             }`
         )
         .then((data) => {
@@ -42,11 +42,11 @@ const Post = props => {
                         <img className="box-image" src={post.mainImage.asset.url} alt={post.title}/>
                         <div className="title-flex">
                           <h4 className="box-title">{post.title}</h4>
-                          <p className="user-follow-info date">{post._createdAt}</p>
+                          <p className="user-follow-info date">{post.date}</p>
                         </div>
                         <p className="description">{post.description}</p>
                       </div>
-                      <Link to={"/post/"+post.slug.current} className="button a">Read More</Link>
+                      <Link to={"/post/"+post.slug.current}><button class="custom-btn btn-12"><span>Click!</span><span>Read More</span></button></Link>
                     </div>
                 ))}
             </div>
