@@ -13,13 +13,13 @@ const Footer = (props) => {
                         <a href="#!" className="btn btn-outline-light btn-floating m-1" role="button">
                             <i className="fab fa-google"></i>
                         </a>
-                        <a href="#!" className="btn btn-outline-light btn-floating m-1" role="button">
+                        <a href="https://www.instagram.com/nishant_charas/" className="btn btn-outline-light btn-floating m-1" role="button">
                             <i className="fab fa-instagram"></i>
                         </a>
-                        <a href="#!" className="btn btn-outline-light btn-floating m-1" role="button">
+                        <a href="https://www.linkedin.com/in/nishant-charas-57b007147/" className="btn btn-outline-light btn-floating m-1" role="button">
                             <i className="fab fa-linkedin-in"></i>
                         </a>
-                        <a href="#!" className="btn btn-outline-light btn-floating m-1" role="button">
+                        <a href="https://github.com/nisnt2411" className="btn btn-outline-light btn-floating m-1" role="button">
                             <i className="fab fa-github"></i>
                         </a>
                     </section>

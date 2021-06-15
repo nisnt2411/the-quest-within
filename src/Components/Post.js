@@ -7,10 +7,6 @@ import './Post.css';
 
 const Post = props => {
     const [postData, setPost] = useState(null);
-
-    function HandleRoute (path) {
-        props.history.push(path)
-    }
     useEffect(() => {
         sanityClient
         .fetch(
@@ -41,7 +37,7 @@ const Post = props => {
             <h1>Recent Posts...</h1>
             <div className="wrap-post">
                 {postData && postData.map(post => (
-                      <div className="box" onClick={()=>HandleRoute("/post/"+post.slug.current)} key={post.mainImage.asset._id}>
+                      <div className="box" key={post.mainImage.asset._id}>
                       <div className="box-top">
                         <img className="box-image" src={post.mainImage.asset.url} alt={post.title}/>
                         <div className="title-flex">

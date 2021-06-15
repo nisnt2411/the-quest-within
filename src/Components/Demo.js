@@ -30,9 +30,9 @@ const Demo = props => {
     },[])
     if(!postData) return <Loader/>
     return(
-        <div>
-            <NavBar/>
-        </div>
+    <div className="container-fluid">
+        <NavBar/>
+    </div>
     )
 }
 export default Demo;
